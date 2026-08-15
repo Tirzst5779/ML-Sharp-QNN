@@ -129,7 +129,7 @@
 
 Pre-converted DLC models are available on HuggingFace:
 
-- **Repository**: [kjcpc/ML-Sharp-QNN](https://huggingface.co/kjcpc/ML-Sharp-QNN)
+- **Repository**: 🤗 [kjcpc/ML-Sharp-QNN](https://huggingface.co/kjcpc/ML-Sharp-QNN)
 - **Precision**: W8A16 (weights: 8-bit, activations: 16-bit)
 - **Files**: 5 DLC files (~650 MB total)
 

@@ -129,7 +129,7 @@
 
 预转换的 DLC 模型托管在 HF-Mirror（镜像）：
 
-- **仓库**: [kjcpc/ML-Sharp-QNN](https://hf-mirror.com/kjcpc/ML-Sharp-QNN)
+- **仓库**: 🤗 [kjcpc/ML-Sharp-QNN](https://hf-mirror.com/kjcpc/ML-Sharp-QNN)
 - **精度**: W8A16（权重 8 位，激活 16 位）
 - **文件**: 5 个 DLC 文件（共约 650 MB）
 
