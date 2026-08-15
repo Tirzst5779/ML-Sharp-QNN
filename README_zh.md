@@ -5,7 +5,7 @@
 # SHARP QNN
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Android](https://img.shields.io/badge/Android-8.0%2B-green)](https://developer.android.com)
+[![Android](https://img.shields.io/badge/Android-12%2B-green)](https://developer.android.com)
 [![Platform](https://img.shields.io/badge/Platform-Snapdragon-blue)](https://www.qualcomm.com)
 
 [English](README.md)
@@ -74,7 +74,7 @@
 ### 硬件
 
 - 搭载 Hexagon DSP 的骁龙设备（骁龙 8 Gen 1 或更新）
-- Android 8.0+ (API 26+)
+- Android 12+ (API 31+)
 - ARM64-v8a 架构
 
 ### 软件

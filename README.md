@@ -5,7 +5,7 @@
 # SHARP QNN
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Android](https://img.shields.io/badge/Android-8.0%2B-green)](https://developer.android.com)
+[![Android](https://img.shields.io/badge/Android-12%2B-green)](https://developer.android.com)
 [![Platform](https://img.shields.io/badge/Platform-Snapdragon-blue)](https://www.qualcomm.com)
 
 [中文版本](README_zh.md)
@@ -74,7 +74,7 @@
 ### Hardware
 
 - Snapdragon device with Hexagon DSP (SD 8 Gen 1 or newer)
-- Android 8.0+ (API 26+)
+- Android 12+ (API 31+)
 - ARM64-v8a architecture
 
 ### Software
