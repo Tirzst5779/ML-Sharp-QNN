@@ -63,7 +63,7 @@ class LogRecorderService : Service() {
             PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT
         )
         return NotificationCompat.Builder(this, channelId)
-            .setSmallIcon(R.drawable.ic_launcher_foreground)
+            .setSmallIcon(R.mipmap.ic_launcher_fg)
             .setContentTitle(getString(R.string.log_recording_notification_title))
             .setContentText(getString(R.string.log_recording_notification_text))
             .setContentIntent(contentIntent)
