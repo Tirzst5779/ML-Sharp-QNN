@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 语义角色色全部由 Compose 主题 (ui/theme) 提供, 此文件仅保留系统/启动所需标记 -->
+    <color name="ic_launcher_background">#1A237E</color>
+</resources>

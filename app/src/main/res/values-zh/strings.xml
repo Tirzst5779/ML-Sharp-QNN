@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    中文覆盖资源。
+    Chinese override resources.
+    默认英文资源见 values/strings.xml.
+-->
+<resources>
+    <!-- ====== App ====== -->
+    <string name="app_name">SHARP QNN</string>
+    <string name="log_recording_channel_name">日志记录</string>
+    <string name="log_recording_notification_title">正在记录日志</string>
+    <string name="log_recording_notification_text">日志将写入 下载/sharp_log，可在设置中关闭</string>
+
+    <!-- ====== Navigation ====== -->
+    <string name="nav_home">主页</string>
+    <string name="nav_models">模型</string>
+    <string name="nav_settings">设置</string>
+    <string name="title_home">SHARP QNN 推理</string>
+    <string name="title_models">模型管理</string>
+    <string name="title_settings">设置</string>
+    <string name="pipeline_subtitle">Patch Encoder + Image Encoder + REST (A/B/C) Pipeline</string>
+
+    <!-- ====== Home ====== -->
+    <string name="home_input_image">输入图片</string>
+    <string name="home_select_image">选择图片</string>
+    <string name="home_no_image">未选择图片</string>
+    <string name="home_loading_image_info">正在读取图片信息…</string>
+    <string name="home_image_info">图片信息</string>
+    <string name="home_image_size">尺寸: %1$s x %2$s</string>
+    <string name="home_image_format">格式: %1$s</string>
+    <string name="home_image_focal">焦距: %1$s mm</string>
+    <string name="home_image_file_size">大小: %1$s</string>
+    <string name="home_image_preview_cd">预览</string>
+    <string name="home_image_load_failed">无法加载图片</string>
+    <string name="home_run_section">推理运行</string>
+    <string name="home_run">运行推理</string>
+    <string name="home_missing_models">需先在「模型」页导入: %1$s</string>
+    <string name="home_progress_section">推理进度</string>
+    <string name="home_done_total">推理完成 · 总耗时</string>
+    <string name="home_export_section">导出结果</string>
+    <string name="home_export_ply">导出 PLY</string>
+    <string name="home_choose_dir">选择保存目录</string>
+    <string name="home_save_to">保存至: %1$s</string>
+    <string name="home_no_save_dir">尚未设置保存目录, 点击后选择</string>
+    <string name="home_export_after_done">推理完成后可导出 PLY</string>
+
+    <!-- ====== Models ====== -->
+    <string name="models_subtitle">5 个模型部分: 图块编码 (PE) · 图像编码 (IE) · 特征融合 · 视差估计 · 高斯增量</string>
+    <string name="models_file_name">文件名</string>
+    <string name="models_format">格式</string>
+    <string name="models_size">大小</string>
+    <string name="models_artifact">编译产物</string>
+    <string name="models_not_imported_hint">未导入模型，请选择 .bin 或 .dlc 文件</string>
+    <string name="models_compiling">正在编译，请稍候…</string>
+    <string name="models_compile_cancel_hint">编译步骤之间响应取消，取消后已释放资源并删除半成品产物</string>
+    <string name="models_cancel_compile">取消编译</string>
+    <string name="models_import">导入</string>
+    <string name="models_compile">编译</string>
+    <string name="models_remove">删除</string>
+    <string name="models_compile_locked">其他模型正在编译中，本模型暂不可操作</string>
+
+    <!-- ====== Model download ====== -->
+    <string name="models_download_title">预转换模型</string>
+    <string name="models_download_desc">一键从 HuggingFace 下载全部 5 个 DLC 模型，无需手动导入</string>
+    <string name="models_download_btn">下载 W8A16</string>
+    <string name="models_download_downloading">正在下载 %1$s (%2$d/%3$d)…</string>
+    <string name="models_download_complete">下载完成: %1$d/%2$d 个文件</string>
+    <string name="models_download_failed">下载失败: %1$s</string>
+    <string name="models_download_cancel">取消</string>
+    <string name="models_download_scan_hint">下载完成后正在扫描模型…</string>
+
+    <!-- ====== Status ====== -->
+    <string name="status_not_imported">未导入</string>
+    <string name="status_compiled">已编译</string>
+    <string name="status_uncompiled">未编译</string>
+    <string name="status_compiling">编译中</string>
+
+    <!-- ====== Model types ====== -->
+    <string name="model_pe">图块编码</string>
+    <string name="model_ie">图像编码</string>
+    <string name="model_rest_a">特征融合</string>
+    <string name="model_rest_b">视差估计</string>
+    <string name="model_rest_c">高斯增量</string>
+
+    <!-- ====== Pipeline stages ====== -->
+    <string name="stage_compile">模型编译</string>
+    <string name="stage_decode">解码图片</string>
+    <string name="stage_pre">预处理切 Patch</string>
+    <string name="stage_pe">图块编码</string>
+    <string name="stage_ie">图像编码</string>
+    <string name="stage_merge">特征合并</string>
+    <string name="stage_rest_a">特征融合</string>
+    <string name="stage_rest_b">视差估计</string>
+    <string name="stage_rest_c">高斯增量</string>
+    <string name="stage_post">点云生成</string>
+    <string name="detail_compiling">正在编译 %1$s…</string>
+    <string name="detail_compiled">%1$s 编译完成</string>
+    <string name="detail_cancelled">编译已中断</string>
+
+    <!-- ====== Settings ====== -->
+    <string name="settings_language">语言</string>
+    <string name="settings_language_desc">切换界面语言; 跟随系统时使用设备语言</string>
+    <string name="settings_language_system">跟随系统</string>
+    <string name="settings_language_zh">中文</string>
+    <string name="settings_language_en">English</string>
+    <string name="settings_download_source">模型下载源</string>
+    <string name="settings_download_source_desc">选择预转换模型的下载来源；中国用户可选择镜像站获得更快速度</string>
+    <string name="settings_download_source_hg">HuggingFace</string>
+    <string name="settings_download_source_hm">HF-Mirror（镜像）</string>
+    <string name="settings_model_manager">模型文件管理器</string>
+    <string name="settings_model_manager_desc">模型存储于应用私有目录 sharp_models (bin/ 与 dlc/ 分类), 可在管理器中查看或删除模型文件</string>
+    <string name="settings_open_manager">打开文件管理器</string>
+    <string name="settings_ply_location">PLY 保存位置</string>
+    <string name="settings_ply_not_set">未设置, 导出时需选择目录</string>
+    <string name="settings_ply_current">当前目录: %1$s</string>
+    <string name="settings_choose_dir">选择目录</string>
+    <string name="settings_image_details">显示图片详细信息</string>
+    <string name="settings_image_details_desc">开启后, 选择图片时显示焦距、格式、尺寸等信息</string>
+    <string name="settings_htp_perf">HTP 性能调度</string>
+    <string name="settings_htp_perf_desc">控制 HTP 电压角投票与 DCVS 调节策略; 更改后重启应用生效</string>
+    <string name="settings_locked_mode">锁角模式 (默认)</string>
+    <string name="settings_locked_mode_desc">电压角锁定为所选档位, 频率恒定 (min=target=max 投票); 禁用空闲休眠, 耗电与发热随档位升高</string>
+    <string name="settings_range_mode">自动调角模式</string>
+    <string name="settings_range_mode_desc">DCVS 在最小角与最大角区间内按所选策略动态调节, 空闲自动降频省电; 允许空闲休眠 (100ms)</string>
+    <string name="settings_corner_step">电压角档位</string>
+    <string name="settings_corner_default_hint">默认最高档 MAX; 档位越低越省电。禁用空闲休眠, 变更后重启生效</string>
+    <string name="settings_freq_range">频率区间 (最小角 ~ 最大角)</string>
+    <string name="settings_min">最小: %1$s</string>
+    <string name="settings_max">最大: %1$s</string>
+    <string name="settings_target_corner">目标角 (初始投票点)</string>
+    <string name="settings_dcvs_policy">DCVS 调节策略</string>
+    <string name="settings_dcvs_rule">规则: 最小角必须低于最大角, 目标角在区间内 (min &lt; target &lt;= max); 变更时自动校正</string>
+    <string name="settings_dynamic_color">动态色彩</string>
+    <string name="settings_dynamic_color_desc">跟随系统壁纸生成主题色 (Android 12+ 生效); 关闭后使用内置蓝紫色调色板</string>
+    <string name="settings_logging">日志记录</string>
+    <string name="settings_logging_desc">记录日志并实时写入 Download/sharp_log/ 目录; 开启后每次进入应用自动记录</string>
+    <string name="settings_cache">缓存</string>
+    <string name="settings_cache_desc">清除 APP 缓存 (推理工作目录等临时文件)，不影响模型文件与编译产物</string>
+    <string name="settings_cache_cleared">已清除 %1$s 个缓存项，释放 %2$s</string>
+    <string name="settings_cache_empty">缓存已是空的</string>
+    <string name="settings_clear_cache">清除缓存</string>
+
+    <!-- ====== DCVS chips & hints ====== -->
+    <string name="settings_dcvs_chip_up_down">上下双向</string>
+    <string name="settings_dcvs_chip_only_up">只升不降</string>
+    <string name="settings_dcvs_chip_saver">省电</string>
+    <string name="settings_dcvs_chip_saver_aggressive">激进省电</string>
+    <string name="settings_dcvs_chip_performance">性能优先</string>
+    <string name="settings_dcvs_chip_duty">占空比</string>
+    <string name="settings_dcvs_hint_up_down">ADJUST_UP_DOWN — 允许 DCVS 上下双向调节频率 (默认)</string>
+    <string name="settings_dcvs_hint_only_up">ADJUST_ONLY_UP — 只升不降: 爬升后不主动降频, 避免反复抖动</string>
+    <string name="settings_dcvs_hint_saver">POWER_SAVER — 省电: 爬升阈值高, 倾向低频运行</string>
+    <string name="settings_dcvs_hint_saver_aggressive">POWER_SAVER_AGGRESSIVE — 激进省电: 降频更快、爬升更慢</string>
+    <string name="settings_dcvs_hint_performance">PERFORMANCE_MODE — 性能优先: 低阈值爬升, 尽量保持高频</string>
+    <string name="settings_dcvs_hint_duty">DUTY_CYCLE — 占空比: 检测 HVX 活动周期调频 (适合流式负载)</string>
+    <string name="settings_dcvs_unknown">未知模式 %1$s</string>
+
+    <!-- ====== Voltage corners / DCVS ====== -->
+    <string name="corner_min">MIN (最低)</string>
+    <string name="corner_max">MAX (最高)</string>
+    <string name="dcvs_up_down">上下双向</string>
+    <string name="dcvs_up_only">只升不降</string>
+    <string name="dcvs_power_saver">省电</string>
+    <string name="dcvs_power_saver_agg">激进省电</string>
+    <string name="dcvs_perf">性能优先</string>
+    <string name="dcvs_duty">占空比</string>
+    <string name="dcvs_hint_up_down">ADJUST_UP_DOWN — 允许 DCVS 上下双向调节频率 (默认)</string>
+    <string name="dcvs_hint_up_only">ADJUST_ONLY_UP — 只升不降: 爬升后不主动降频, 避免反复抖动</string>
+    <string name="dcvs_hint_power_saver">POWER_SAVER — 省电: 爬升阈值高, 倾向低频运行</string>
+    <string name="dcvs_hint_power_saver_agg">POWER_SAVER_AGGRESSIVE — 激进省电: 降频更快、爬升更慢</string>
+    <string name="dcvs_hint_perf">PERFORMANCE_MODE — 性能优先: 低阈值爬升, 尽量保持高频</string>
+    <string name="dcvs_hint_duty">DUTY_CYCLE — 占空比: 检测 HVX 活动周期调频 (适合流式负载)</string>
+    <string name="dcvs_hint_unknown">未知模式 0x%1$s</string>
+
+    <!-- ====== File manager ====== -->
+    <string name="fm_title">模型文件管理器</string>
+    <string name="fm_back_cd">返回上一级</string>
+    <string name="fm_close_cd">关闭</string>
+    <string name="fm_done">完成</string>
+    <string name="fm_multiselect">多选</string>
+    <string name="fm_empty">空目录</string>
+    <string name="fm_dlc_hint">DLC 模型 (待编译)</string>
+    <string name="fm_artifact">编译产物</string>
+    <string name="fm_bin_hint">模型文件 (.bin)</string>
+    <string name="fm_deleted">已删除 %1$s 个文件</string>
+    <string name="fm_delete_selected">删除选中 (%1$s)</string>
+
+    <!-- ====== Message keys (native / Kotlin ⇄ UI) ====== -->
+    <string name="err_prep_image_failed">图片预处理失败</string>
+    <string name="err_pre_failed">预处理失败</string>
+    <string name="err_pe_not_loaded">PE 模型未加载</string>
+    <string name="err_pe_tensor_info_empty">PE tensor info 为空</string>
+    <string name="err_read_patch_failed">读取 patch 失败</string>
+    <string name="err_pe_infer_failed">PE 推理失败</string>
+    <string name="err_pe_write_failed">PE 写出失败</string>
+    <string name="err_ie_not_loaded">IE 模型未加载</string>
+    <string name="err_read_x2_failed">读取 x2.raw 失败</string>
+    <string name="err_ie_infer_failed">IE 推理失败</string>
+    <string name="err_ie_write_failed">IE 写出失败</string>
+    <string name="err_merge_failed">特征合并失败</string>
+    <string name="err_runtime_not_ready">%1$s runtime 未就绪</string>
+    <string name="err_tensor_info_empty">%1$s tensor info 为空</string>
+    <string name="err_tensor_read_failed">%1$s 读取失败: %2$s</string>
+    <string name="err_tensor_input_missing">%1$s 输入缺失: %2$s</string>
+    <string name="err_infer_failed">%1$s 推理失败</string>
+    <string name="err_output_missing">%1$s 输出缺失</string>
+    <string name="err_output_meta_missing">%1$s 输出元信息缺失</string>
+    <string name="err_write_failed">%1$s 写出失败</string>
+    <string name="err_disparity_copy_failed">disparity 复制失败</string>
+    <string name="err_disparity_output_missing">未找到 disparity 输出</string>
+    <string name="err_delta_copy_failed">delta 复制失败</string>
+    <string name="err_delta_output_missing">未找到 delta 输出</string>
+    <string name="err_pointcloud_failed">点云生成失败</string>
+    <string name="err_copy_image_failed">复制图片失败</string>
+    <string name="err_prep_null">图片预处理失败 (prepImage 返回 null)</string>
+    <string name="err_rest_a_failed">特征融合失败</string>
+    <string name="err_rest_b_failed">视差估计失败</string>
+    <string name="err_rest_c_failed">高斯增量失败</string>
+    <string name="err_post_failed">点云生成失败</string>
+    <string name="err_stage_error">阶段 %1$s 错误: %2$s</string>
+    <string name="err_stage_exception">阶段 %1$s 异常: %2$s</string>
+    <string name="err_qnn_init">QNN 初始化失败: 未检测到设备 HTP 架构 (请确认 QNN 库与设备兼容)</string>
+    <string name="err_skel">提取 Skel 失败 (arch=%1$s)</string>
+    <string name="err_qnn_native_init">QNN 运行时初始化失败 (nativeInit 返回 false)</string>
+    <string name="err_qnn_init_default">QNN 初始化失败</string>
+    <string name="err_model_not_imported">%1$s 模型未导入</string>
+    <string name="err_model_missing">%1$s 模型丢失</string>
+    <string name="err_model_no_bin">%1$s 无可用 .bin</string>
+    <string name="err_model_load_failed">%1$s 加载失败 (loadContextBinary 返回 false)</string>
+    <string name="err_model_compile_failed">%1$s 编译失败: %2$s</string>
+    <string name="err_compile_cancel">编译已取消</string>
+    <string name="err_dlc_native">DLC 编译失败 (native 返回 false)</string>
+    <string name="err_import_format">不支持的文件格式: .%1$s (仅支持 .bin / .dlc)</string>
+    <string name="err_import_copy">复制文件失败</string>
+    <string name="err_import_move">移动文件失败</string>
+    <string name="err_import_validate">模型文件无效或已损坏</string>
+    <string name="err_import_empty">未导入模型</string>
+    <string name="err_dlc_only">仅 DLC 模型需要编译</string>
+    <string name="err_ply_missing">PLY 文件不存在, 请先运行推理</string>
+    <string name="err_export_create">导出失败: 无法在所选目录创建文件</string>
+    <string name="err_export_stream">导出失败: 无法打开输出流</string>
+    <string name="err_export_fail">导出失败: %1$s</string>
+    <string name="msg_export_ok">导出成功: %1$s 已保存至所选目录</string>
+    <string name="msg_import_ok">%1$s 导入成功</string>
+    <string name="err_import_fail">导入失败: %1$s</string>
+    <string name="msg_compile_ok">%1$s 编译成功</string>
+    <string name="err_compile_fail">编译失败: %1$s</string>
+    <string name="msg_remove_ok">%1$s 已删除</string>
+    <string name="err_remove_fail">删除失败: %1$s</string>
+    <string name="msg_cache_cleared">已清除 %1$s 个缓存项，释放 %2$s</string>
+    <string name="msg_cache_empty">缓存已是空的</string>
+    <string name="msg_deleted">已删除 %1$s 个文件</string>
+    <string name="msg_download_complete">下载完成: %1$s/%2$s 个文件</string>
+    <string name="err_download_fail">下载失败: %1$s</string>
+</resources>

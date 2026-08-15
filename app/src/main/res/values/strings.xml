@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    默认英文资源 (fallback 语言)。
+    Default English resources (fallback language).
+    覆盖资源见 values-zh/strings.xml (中文 / Chinese overrides).
+-->
+<resources>
+    <!-- ====== App ====== -->
+    <string name="app_name">SHARP QNN</string>
+    <string name="log_recording_channel_name">Log Recording</string>
+    <string name="log_recording_notification_title">Recording logs</string>
+    <string name="log_recording_notification_text">Logs are written to Download/sharp_log; can be turned off in Settings</string>
+
+    <!-- ====== Navigation ====== -->
+    <string name="nav_home">Home</string>
+    <string name="nav_models">Models</string>
+    <string name="nav_settings">Settings</string>
+    <string name="title_home">SHARP QNN Inference</string>
+    <string name="title_models">Model Manager</string>
+    <string name="title_settings">Settings</string>
+    <string name="pipeline_subtitle">Patch Encoder + Image Encoder + REST (A/B/C) Pipeline</string>
+
+    <!-- ====== Home ====== -->
+    <string name="home_input_image">Input Image</string>
+    <string name="home_select_image">Select Image</string>
+    <string name="home_no_image">No image selected</string>
+    <string name="home_loading_image_info">Reading image info…</string>
+    <string name="home_image_info">Image Info</string>
+    <string name="home_image_size">Size: %1$s × %2$s</string>
+    <string name="home_image_format">Format: %1$s</string>
+    <string name="home_image_focal">Focal Length: %1$s mm</string>
+    <string name="home_image_file_size">Size: %1$s</string>
+    <string name="home_image_preview_cd">Preview</string>
+    <string name="home_image_load_failed">Failed to load image</string>
+    <string name="home_run_section">Inference</string>
+    <string name="home_run">Run Inference</string>
+    <string name="home_missing_models">Import at Models first: %1$s</string>
+    <string name="home_progress_section">Progress</string>
+    <string name="home_done_total">Inference Done · Total Time</string>
+    <string name="home_export_section">Export Result</string>
+    <string name="home_export_ply">Export PLY</string>
+    <string name="home_choose_dir">Choose Save Directory</string>
+    <string name="home_save_to">Saving to: %1$s</string>
+    <string name="home_no_save_dir">No save directory yet; tap to choose one</string>
+    <string name="home_export_after_done">PLY can be exported after inference completes</string>
+
+    <!-- ====== Models ====== -->
+    <string name="models_subtitle">5 model parts: Patch Encoder (PE) · Image Encoder (IE) · Feature Fusion · Disparity Estimation · Gaussian Delta</string>
+    <string name="models_file_name">File Name</string>
+    <string name="models_format">Format</string>
+    <string name="models_size">Size</string>
+    <string name="models_artifact">Artifact</string>
+    <string name="models_not_imported_hint">No model imported; pick a .bin or .dlc file</string>
+    <string name="models_compiling">Compiling, please wait…</string>
+    <string name="models_compile_cancel_hint">Cancellation applies between compilation steps; resources are released and partial artifacts removed</string>
+    <string name="models_cancel_compile">Cancel Compile</string>
+    <string name="models_import">Import</string>
+    <string name="models_compile">Compile</string>
+    <string name="models_remove">Remove</string>
+    <string name="models_compile_locked">Another model is compiling; this model is disabled</string>
+
+    <!-- ====== Model download ====== -->
+    <string name="models_download_title">Pre-converted Models</string>
+    <string name="models_download_desc">Download all 5 DLC models from HuggingFace in one tap; no manual import needed</string>
+    <string name="models_download_btn">Download W8A16</string>
+    <string name="models_download_downloading">Downloading %1$s (%2$d/%3$d)…</string>
+    <string name="models_download_complete">Download complete: %1$d/%2$d files</string>
+    <string name="models_download_failed">Download failed: %1$s</string>
+    <string name="models_download_cancel">Cancel</string>
+    <string name="models_download_scan_hint">Scanning models after download…</string>
+
+    <!-- ====== Status ====== -->
+    <string name="status_not_imported">Not Imported</string>
+    <string name="status_compiled">Compiled</string>
+    <string name="status_uncompiled">Not Compiled</string>
+    <string name="status_compiling">Compiling</string>
+
+    <!-- ====== Model types ====== -->
+    <string name="model_pe">Patch Encoder</string>
+    <string name="model_ie">Image Encoder</string>
+    <string name="model_rest_a">Feature Fusion</string>
+    <string name="model_rest_b">Disparity Estimation</string>
+    <string name="model_rest_c">Gaussian Delta</string>
+
+    <!-- ====== Pipeline stages ====== -->
+    <string name="stage_compile">Model Compilation</string>
+    <string name="stage_decode">Decode Image</string>
+    <string name="stage_pre">Preprocess &amp; Split Patches</string>
+    <string name="stage_pe">Patch Encoding</string>
+    <string name="stage_ie">Image Encoding</string>
+    <string name="stage_merge">Feature Merge</string>
+    <string name="stage_rest_a">Feature Fusion</string>
+    <string name="stage_rest_b">Disparity Estimation</string>
+    <string name="stage_rest_c">Gaussian Delta</string>
+    <string name="stage_post">Point Cloud Generation</string>
+    <string name="detail_compiling">Compiling %1$s…</string>
+    <string name="detail_compiled">%1$s compiled</string>
+    <string name="detail_cancelled">Compilation interrupted</string>
+
+    <!-- ====== Settings ====== -->
+    <string name="settings_language">Language</string>
+    <string name="settings_language_desc">Switches the UI language; System follows the device language</string>
+    <string name="settings_language_system">System</string>
+    <string name="settings_language_zh">中文</string>
+    <string name="settings_language_en">English</string>
+    <string name="settings_download_source">Model Download Source</string>
+    <string name="settings_download_source_desc">Choose where to download pre-converted models from; Chinese users may prefer the mirror for faster speed</string>
+    <string name="settings_download_source_hg">HuggingFace</string>
+    <string name="settings_download_source_hm">HF-Mirror</string>
+    <string name="settings_model_manager">Model File Manager</string>
+    <string name="settings_model_manager_desc">Models live in the app-private sharp_models (bin/ and dlc/); view or delete files here</string>
+    <string name="settings_open_manager">Open File Manager</string>
+    <string name="settings_ply_location">PLY Save Location</string>
+    <string name="settings_ply_not_set">Not set; choose a directory when exporting</string>
+    <string name="settings_ply_current">Current: %1$s</string>
+    <string name="settings_choose_dir">Choose Directory</string>
+    <string name="settings_image_details">Show Image Details</string>
+    <string name="settings_image_details_desc">Shows focal length, format and size when an image is picked</string>
+    <string name="settings_htp_perf">HTP Performance Scheduling</string>
+    <string name="settings_htp_perf_desc">Controls HTP voltage-corner voting and the DCVS policy; changes take effect after a restart</string>
+    <string name="settings_locked_mode">Locked Corner (default)</string>
+    <string name="settings_locked_mode_desc">The voltage corner is fixed at the selected step with constant frequency (min=target=max votes); idle sleep is disabled; power and heat scale with the step</string>
+    <string name="settings_range_mode">Auto Range</string>
+    <string name="settings_range_mode_desc">DCVS adjusts dynamically within min~max by the chosen policy and drops frequency when idle; idle sleep allowed (100ms)</string>
+    <string name="settings_corner_step">Voltage Corner Step</string>
+    <string name="settings_corner_default_hint">Default is the top step MAX; lower steps save power. Idle sleep disabled; changes apply after restart</string>
+    <string name="settings_freq_range">Frequency Range (min ~ max)</string>
+    <string name="settings_min">Min: %1$s</string>
+    <string name="settings_max">Max: %1$s</string>
+    <string name="settings_target_corner">Target Corner (initial vote)</string>
+    <string name="settings_dcvs_policy">DCVS Policy</string>
+    <string name="settings_dcvs_rule">Rule: min must be below max and the target inside (min &lt; target &lt;= max); corrected automatically on change</string>
+    <string name="settings_dynamic_color">Dynamic Color</string>
+    <string name="settings_dynamic_color_desc">Follows the wallpaper for theme colors (Android 12+); off uses the built-in blue-violet palette</string>
+    <string name="settings_logging">Log Recording</string>
+    <string name="settings_logging_desc">Records logs in real time into Download/sharp_log/; auto-records every time you enter the app</string>
+    <string name="settings_cache">Cache</string>
+    <string name="settings_cache_desc">Clears the app cache (inference work dir and temp files) without touching models or compiled artifacts</string>
+    <string name="settings_cache_cleared">Cleared %1$s items, freed %2$s</string>
+    <string name="settings_cache_empty">The cache is already empty</string>
+    <string name="settings_clear_cache">Clear Cache</string>
+
+    <!-- ====== DCVS chips & hints ====== -->
+    <string name="settings_dcvs_chip_up_down">Up/Down</string>
+    <string name="settings_dcvs_chip_only_up">Up Only</string>
+    <string name="settings_dcvs_chip_saver">Saver</string>
+    <string name="settings_dcvs_chip_saver_aggressive">Aggressive Saver</string>
+    <string name="settings_dcvs_chip_performance">Performance</string>
+    <string name="settings_dcvs_chip_duty">Duty Cycle</string>
+    <string name="settings_dcvs_hint_up_down">ADJUST_UP_DOWN — DCVS may adjust frequency both ways (default)</string>
+    <string name="settings_dcvs_hint_only_up">ADJUST_ONLY_UP — rises without actively lowering, avoiding oscillation</string>
+    <string name="settings_dcvs_hint_saver">POWER_SAVER — slow to ramp up, biased toward low frequency</string>
+    <string name="settings_dcvs_hint_saver_aggressive">POWER_SAVER_AGGRESSIVE — lowers faster and ramps slower</string>
+    <string name="settings_dcvs_hint_performance">PERFORMANCE_MODE — low ramp-up threshold, keeps high frequency when possible</string>
+    <string name="settings_dcvs_hint_duty">DUTY_CYCLE — adjusts by HVX active-cycle detection (good for streaming loads)</string>
+    <string name="settings_dcvs_unknown">Unknown mode %1$s</string>
+
+    <!-- ====== Voltage corners / DCVS ====== -->
+    <string name="corner_min">MIN (lowest)</string>
+    <string name="corner_max">MAX (highest)</string>
+    <string name="dcvs_up_down">Adjust Both</string>
+    <string name="dcvs_up_only">Up Only</string>
+    <string name="dcvs_power_saver">Power Saver</string>
+    <string name="dcvs_power_saver_agg">Aggressive Saver</string>
+    <string name="dcvs_perf">Performance</string>
+    <string name="dcvs_duty">Duty Cycle</string>
+    <string name="dcvs_hint_up_down">ADJUST_UP_DOWN — frequency may adjust both up and down (default)</string>
+    <string name="dcvs_hint_up_only">ADJUST_ONLY_UP — ramps up only; no active down-tuning, avoids oscillation</string>
+    <string name="dcvs_hint_power_saver">POWER_SAVER — high ramp thresholds, low-frequency bias</string>
+    <string name="dcvs_hint_power_saver_agg">POWER_SAVER_AGGRESSIVE — faster down-tuning, slower ramping</string>
+    <string name="dcvs_hint_perf">PERFORMANCE_MODE — low-threshold ramping, stays high-frequency</string>
+    <string name="dcvs_hint_duty">DUTY_CYCLE — scales with HVX activity (streaming workloads)</string>
+    <string name="dcvs_hint_unknown">Unknown mode 0x%1$s</string>
+
+    <!-- ====== File manager ====== -->
+    <string name="fm_title">Model File Manager</string>
+    <string name="fm_back_cd">Back</string>
+    <string name="fm_close_cd">Close</string>
+    <string name="fm_done">Done</string>
+    <string name="fm_multiselect">Select</string>
+    <string name="fm_empty">Empty directory</string>
+    <string name="fm_dlc_hint">DLC model (to compile)</string>
+    <string name="fm_artifact">Compiled artifact</string>
+    <string name="fm_bin_hint">Model file (.bin)</string>
+    <string name="fm_deleted">Deleted %1$s file(s)</string>
+    <string name="fm_delete_selected">Delete Selected (%1$s)</string>
+
+    <!-- ====== Message keys (native / Kotlin ⇄ UI) ====== -->
+    <string name="err_prep_image_failed">Image preprocessing failed</string>
+    <string name="err_pre_failed">Preprocessing failed</string>
+    <string name="err_pe_not_loaded">PE model not loaded</string>
+    <string name="err_pe_tensor_info_empty">PE tensor info is empty</string>
+    <string name="err_read_patch_failed">Failed to read patch</string>
+    <string name="err_pe_infer_failed">PE inference failed</string>
+    <string name="err_pe_write_failed">Failed to write PE outputs</string>
+    <string name="err_ie_not_loaded">IE model not loaded</string>
+    <string name="err_read_x2_failed">Failed to read x2.raw</string>
+    <string name="err_ie_infer_failed">IE inference failed</string>
+    <string name="err_ie_write_failed">Failed to write IE outputs</string>
+    <string name="err_merge_failed">Feature merge failed</string>
+    <string name="err_runtime_not_ready">%1$s runtime not ready</string>
+    <string name="err_tensor_info_empty">%1$s tensor info is empty</string>
+    <string name="err_tensor_read_failed">Failed to read the tensor for %1$s: %2$s</string>
+    <string name="err_tensor_input_missing">Input tensor missing for %1$s: %2$s</string>
+    <string name="err_infer_failed">%1$s inference failed</string>
+    <string name="err_output_missing">%1$s output missing</string>
+    <string name="err_output_meta_missing">%1$s output metadata missing</string>
+    <string name="err_write_failed">Failed to write %1$s outputs</string>
+    <string name="err_disparity_copy_failed">Failed to copy disparity</string>
+    <string name="err_disparity_output_missing">Disparity output not found</string>
+    <string name="err_delta_copy_failed">Failed to copy delta</string>
+    <string name="err_delta_output_missing">Delta output not found</string>
+    <string name="err_pointcloud_failed">Point cloud generation failed</string>
+    <string name="err_copy_image_failed">Failed to copy the image</string>
+    <string name="err_prep_null">Image preprocessing failed (prepImage returned null)</string>
+    <string name="err_rest_a_failed">Feature fusion failed</string>
+    <string name="err_rest_b_failed">Disparity estimation failed</string>
+    <string name="err_rest_c_failed">Gaussian delta failed</string>
+    <string name="err_post_failed">Point cloud generation failed</string>
+    <string name="err_stage_error">Stage %1$s error: %2$s</string>
+    <string name="err_stage_exception">Stage %1$s exception: %2$s</string>
+    <string name="err_qnn_init">QNN initialization failed: no device HTP architecture detected (check QNN library/device compatibility)</string>
+    <string name="err_skel">Failed to extract Skel (arch=%1$s)</string>
+    <string name="err_qnn_native_init">QNN runtime initialization failed (nativeInit returned false)</string>
+    <string name="err_qnn_init_default">QNN initialization failed</string>
+    <string name="err_model_not_imported">%1$s model not imported</string>
+    <string name="err_model_missing">%1$s model is missing</string>
+    <string name="err_model_no_bin">%1$s has no usable .bin</string>
+    <string name="err_model_load_failed">%1$s load failed (loadContextBinary returned false)</string>
+    <string name="err_model_compile_failed">%1$s compile failed: %2$s</string>
+    <string name="err_compile_cancel">Compilation cancelled</string>
+    <string name="err_dlc_native">DLC compile failed (native returned false)</string>
+    <string name="err_import_format">Unsupported format: .%1$s (only .bin / .dlc)</string>
+    <string name="err_import_copy">Failed to copy the file</string>
+    <string name="err_import_move">Failed to move the file</string>
+    <string name="err_import_validate">Model file is invalid</string>
+    <string name="err_import_empty">No model imported</string>
+    <string name="err_dlc_only">Only DLC models need compiling</string>
+    <string name="err_ply_missing">PLY file not found; run inference first</string>
+    <string name="err_export_create">Export failed: could not create the file in the chosen directory</string>
+    <string name="err_export_stream">Export failed: could not open the output stream</string>
+    <string name="err_export_fail">Export failed: %1$s</string>
+    <string name="msg_export_ok">Export succeeded: %1$s saved to the chosen directory</string>
+    <string name="msg_import_ok">%1$s imported successfully</string>
+    <string name="err_import_fail">Import failed: %1$s</string>
+    <string name="msg_compile_ok">%1$s compiled successfully</string>
+    <string name="err_compile_fail">Compile failed: %1$s</string>
+    <string name="msg_remove_ok">%1$s removed</string>
+    <string name="err_remove_fail">Remove failed: %1$s</string>
+    <string name="msg_cache_cleared">Cleared %1$s items, freed %2$s</string>
+    <string name="msg_cache_empty">The cache is already empty</string>
+    <string name="msg_deleted">Deleted %1$s file(s)</string>
+    <string name="msg_download_complete">Download complete: %1$s/%2$s files</string>
+    <string name="err_download_fail">Download failed: %1$s</string>
+</resources>

@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- 暗色变体: 避免深色模式下启动窗口闪白 -->
+    <style name="Theme.SHARPQNN" parent="android:Theme.Material.NoActionBar" />
+</resources>
