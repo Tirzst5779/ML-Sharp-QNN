@@ -94,8 +94,8 @@
 1. **克隆仓库**
 
     ```bash
-    git clone https://github.com/kjcpc/SHARP-QNN.git
-    cd SHARP-QNN
+    git clone https://github.com/kjcpc/ML-Sharp-QNN.git
+    cd ML-Sharp-QNN
     ```
 
 2. **配置 QNN SDK**
