@@ -94,7 +94,7 @@
 1. **Clone the repository**
 
     ```bash
-    git clone https://github.com/kjcpc/ML-Sharp-QNN.git
+    git clone https://github.com/kjckangshifu/ML-Sharp-QNN.git
     cd ML-Sharp-QNN
     ```
 
