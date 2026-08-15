@@ -81,11 +81,11 @@
 
 | 工具 | 版本 | 备注 |
 |---|---|---|
-| Android Studio | Ladybug+ | |
-| NDK | 29.0.14206865 | |
-| CMake | 3.22.1+ | |
+| JDK | 17 | Kotlin 编译所需 |
+| Android SDK | command-line tools | [下载](https://developer.android.com/studio#command-line-tools-only) |
+| NDK | 29.0.14206865 | 通过 `sdkmanager "ndk;29.0.14206865"` 安装 |
+| CMake | 3.22.1+ | 通过 `sdkmanager "cmake;3.22.1"` 安装 |
 | Qualcomm QNN SDK | 2.48.0 | [从 Qualcomm 下载](https://www.qualcomm.com/developer/software/qualcomm-ai-engine-direct-sdk) |
-| Java | JDK 17 | |
 
 ---
 

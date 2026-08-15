@@ -81,11 +81,11 @@
 
 | Tool | Version | Notes |
 |---|---|---|
-| Android Studio | Ladybug+ | |
-| NDK | 29.0.14206865 | |
-| CMake | 3.22.1+ | |
+| JDK | 17 | Required for Kotlin compilation |
+| Android SDK | command-line tools | [Download](https://developer.android.com/studio#command-line-tools-only) |
+| NDK | 29.0.14206865 | Install via `sdkmanager "ndk;29.0.14206865"` |
+| CMake | 3.22.1+ | Install via `sdkmanager "cmake;3.22.1"` |
 | Qualcomm QNN SDK | 2.48.0 | [Download from Qualcomm](https://www.qualcomm.com/developer/software/qualcomm-ai-engine-direct-sdk) |
-| Java | JDK 17 | |
 
 ---
 
