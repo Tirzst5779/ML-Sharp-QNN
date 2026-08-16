@@ -85,7 +85,7 @@
 | Android SDK | command-line tools | [下载](https://developer.android.com/studio#command-line-tools-only) |
 | NDK | 29.0.14206865 | 通过 `sdkmanager "ndk;29.0.14206865"` 安装 |
 | CMake | 3.22.1+ | 通过 `sdkmanager "cmake;3.22.1"` 安装 |
-| Qualcomm QNN SDK | 2.48.0 | [从 Qualcomm 下载](https://www.qualcomm.com/developer/software/qualcomm-ai-engine-direct-sdk) |
+| Qualcomm QNN SDK | 2.48.0 | [下载](https://apigwx-aws.qualcomm.com/qsc/public/v1/api/download/software/sdks/Qualcomm_AI_Runtime_Community/All/2.48.0.260626/v2.48.0.260626.zip) |
 
 ---
 
